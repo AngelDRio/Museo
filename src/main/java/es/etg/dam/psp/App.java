@@ -4,6 +4,7 @@ public class App {
 
     public static final int PERSONAS_ENTRAN = 10;
     public static final int PERSONAS_SALEN = 15;
+    public static final int TIEMPO_ESPERA = 500;
     public static void main(String[] args) throws InterruptedException {
         Sala sala = new Sala();
 
@@ -15,6 +16,8 @@ public class App {
             Thread salida = new Thread(new Salida(sala));
             salida.start();
         }
+
+        Thread.sleep(TIEMPO_ESPERA);
 
         System.out.println(sala.aforo);
     }

@@ -5,11 +5,11 @@ public class Sala {
 
     int aforo = 100;
 
-    public void incrementar(){
+    public synchronized void incrementar(){
         aforo = aforo +SUMA_RESTA_PERSONAS;
     }
 
-    public void decrementar(){
+    public synchronized void decrementar(){
         aforo = aforo -SUMA_RESTA_PERSONAS;
     }
 }
